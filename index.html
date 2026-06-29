@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MagicMakeup Minimal Project Page</title>
+  <meta name="description" content="Project page for MagicMakeup, a region-controllable diffusion transformer for high-fidelity makeup transfer.">
+  <meta property="og:title" content="MagicMakeup">
+  <meta property="og:description" content="Region-controllable, high-fidelity makeup transfer with diffusion transformers.">
+  <meta property="og:image" content="assets/images/teaser.png">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="./" aria-label="MagicMakeup project page home">
+          <span class="brand__mark">MM</span>
+          <span>MagicMakeup<span class="brand__sub">Project page</span></span>
+        </a>
+        <nav class="nav" aria-label="Project navigation">
+          <a href="#highlights">Highlights</a>
+          <a href="#results">Results</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__media" aria-hidden="true">
+          <figure><img src="assets/images/teaser.png" alt=""></figure>
+          <figure><img src="assets/images/region-transfer.png" alt=""></figure>
+          <figure><img src="assets/images/comparison.png" alt=""></figure>
+        </div>
+        <div class="hero__veil"></div>
+        <div class="hero__content">
+          <span class="eyebrow">ECCV 2026</span>
+          <h1>MagicMakeup</h1>
+          <p class="hero__lead">A region-controllable diffusion transformer for high-fidelity makeup transfer.</p>
+          <div class="hero__meta">
+            <span>Ziyi Wang, Siming Zheng, Yang Yang, Shusong Xu, Hao Zhang, Bo Li, Changqing Zou, Peng-Tao Jiang</span>
+            <span>State Key Lab of CAD&amp;CG, Zhejiang University / vivo BlueImage Lab, vivo Mobile Communication Co., Ltd.</span>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--light btn--disabled" href="#" aria-disabled="true">Paper</a>
+            <a class="btn btn--ghost btn--disabled" href="#" aria-disabled="true">Code</a>
+            <a class="btn btn--ghost btn--disabled" href="#" aria-disabled="true">Dataset</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="highlights" class="section">
+        <div class="container">
+          <div class="section-head section-head--center">
+            <span class="eyebrow">Highlights</span>
+            <h2 class="section-title">Precise makeup transfer without losing identity</h2>
+            <p class="section-sub">MagicMakeup transfers full-face and regional makeup while preserving source identity, facial geometry, and non-edited regions.</p>
+          </div>
+
+          <div class="split split--highlights">
+            <figure class="figure-plate figure-plate--overview">
+              <div class="figure-plate__bar"><span>Project Overview</span></div>
+              <div class="figure-plate__media">
+                <img src="assets/images/teaser.png" alt="MagicMakeup overview">
+              </div>
+              <figcaption>Mix references for eyes and lips, edit a single region, or apply full-face makeup.</figcaption>
+            </figure>
+
+            <div class="highlight-side">
+              <div class="accordion">
+                <details open>
+                  <summary><span class="chip">01</span><span>Token-Aligned Region Gating</span></summary>
+                  <p>Pixel masks are aligned with attention tokens, then region-specific logit gating blocks cross-region leakage.</p>
+                </details>
+                <details>
+                  <summary><span class="chip">02</span><span>Cross-Modal Perception Guidance</span></summary>
+                  <p>Text and image features are aligned to clarify which attributes should be transferred and which identity cues should be preserved.</p>
+                </details>
+                <details>
+                  <summary><span class="chip">03</span><span>High-Resolution Benchmark</span></summary>
+                  <p>The benchmark covers synthetic and real 1024 x 1024 makeup-transfer settings with region-level evaluation.</p>
+                </details>
+              </div>
+
+              <div class="kpi-strip kpi-strip--highlight">
+                <div class="kpi"><strong>1024</strong><span>High-resolution paired data</span></div>
+                <div class="kpi"><strong>3</strong><span>Region modes: eyes, lips, face</span></div>
+                <div class="kpi"><strong>2</strong><span>Synthetic and real benchmarks</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="section">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Results</span>
+            <h2 class="section-title">Full-face and regional transfer results</h2>
+          </div>
+
+          <div class="result-block">
+            <div class="result-block__head">
+              <h3>Full-Face Makeup</h3>
+            </div>
+            <div class="paired-grid">
+              <article class="paired-card paired-card--slider" data-compare-tile>
+                <figure class="paired-card__reference">
+                  <img src="assets/images/1-2.png" alt="Full-face makeup reference">
+                </figure>
+                <div class="compare-viewer compare-viewer--full" data-compare-viewer tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Full-face makeup comparison split">
+                  <img src="assets/images/1-1.png" alt="Source face">
+                  <img class="compare-viewer__after" src="assets/images/1-3.png" alt="Full-face makeup result">
+                  <div class="compare-viewer__line" aria-hidden="true"></div>
+                  <span class="compare-viewer__handle" aria-hidden="true"></span>
+                </div>
+              </article>
+              <article class="paired-card paired-card--slider" data-compare-tile>
+                <figure class="paired-card__reference">
+                  <img src="assets/images/2-2.png" alt="Full-face makeup reference">
+                </figure>
+                <div class="compare-viewer compare-viewer--full" data-compare-viewer tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Full-face makeup comparison split">
+                  <img src="assets/images/2-1.png" alt="Source face">
+                  <img class="compare-viewer__after" src="assets/images/2-3.png" alt="Full-face makeup result">
+                  <div class="compare-viewer__line" aria-hidden="true"></div>
+                  <span class="compare-viewer__handle" aria-hidden="true"></span>
+                </div>
+              </article>
+              <article class="paired-card paired-card--slider" data-compare-tile>
+                <figure class="paired-card__reference">
+                  <img src="assets/images/3-2.png" alt="Full-face makeup reference">
+                </figure>
+                <div class="compare-viewer compare-viewer--full" data-compare-viewer tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Full-face makeup comparison split">
+                  <img src="assets/images/3-1.png" alt="Source face">
+                  <img class="compare-viewer__after" src="assets/images/3-3.png" alt="Full-face makeup result">
+                  <div class="compare-viewer__line" aria-hidden="true"></div>
+                  <span class="compare-viewer__handle" aria-hidden="true"></span>
+                </div>
+              </article>
+              <article class="paired-card paired-card--slider" data-compare-tile>
+                <figure class="paired-card__reference">
+                  <img src="assets/images/4-2.png" alt="Full-face makeup reference">
+                </figure>
+                <div class="compare-viewer compare-viewer--full" data-compare-viewer tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Full-face makeup comparison split">
+                  <img src="assets/images/4-1.png" alt="Source face">
+                  <img class="compare-viewer__after" src="assets/images/4-3.png" alt="Full-face makeup result">
+                  <div class="compare-viewer__line" aria-hidden="true"></div>
+                  <span class="compare-viewer__handle" aria-hidden="true"></span>
+                </div>
+              </article>
+              <article class="paired-card paired-card--slider" data-compare-tile>
+                <figure class="paired-card__reference">
+                  <img src="assets/images/5_2.png" alt="Full-face makeup reference">
+                </figure>
+                <div class="compare-viewer compare-viewer--full" data-compare-viewer tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Full-face makeup comparison split">
+                  <img src="assets/images/5_1.png" alt="Source face">
+                  <img class="compare-viewer__after" src="assets/images/5_3.png" alt="Full-face makeup result">
+                  <div class="compare-viewer__line" aria-hidden="true"></div>
+                  <span class="compare-viewer__handle" aria-hidden="true"></span>
+                </div>
+              </article>
+              <article class="paired-card paired-card--slider" data-compare-tile>
+                <figure class="paired-card__reference">
+                  <img src="assets/images/6_2.png" alt="Full-face makeup reference">
+                </figure>
+                <div class="compare-viewer compare-viewer--full" data-compare-viewer tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Full-face makeup comparison split">
+                  <img src="assets/images/6_1.png" alt="Source face">
+                  <img class="compare-viewer__after" src="assets/images/6_3.png" alt="Full-face makeup result">
+                  <div class="compare-viewer__line" aria-hidden="true"></div>
+                  <span class="compare-viewer__handle" aria-hidden="true"></span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="result-block">
+            <div class="result-block__head">
+              <h3>Regional Transfer</h3>
+            </div>
+            <div class="regional-grid">
+              <article class="regional-card" data-regional-card>
+                <div class="regional-card__refs">
+                  <h4>Reference</h4>
+                  <button class="regional-option is-active" type="button" data-regional-option data-output-src="assets/images/b1-3.png" aria-label="Regional reference option 1"><img src="assets/images/b1-2.png" alt=""></button>
+                  <button class="regional-option" type="button" data-regional-option data-output-src="assets/images/b1-5.png" aria-label="Regional reference option 2"><img src="assets/images/b1-4.png" alt=""></button>
+                </div>
+                <figure class="regional-card__output">
+                  <h4>Output</h4>
+                  <img data-regional-output src="assets/images/b1-1.png" alt="Regional transfer output">
+                </figure>
+              </article>
+              <article class="regional-card" data-regional-card>
+                <div class="regional-card__refs">
+                  <h4>Reference</h4>
+                  <button class="regional-option is-active" type="button" data-regional-option data-output-src="assets/images/c1-3.png" aria-label="Regional reference option 1"><img src="assets/images/c1-2.png" alt=""></button>
+                  <button class="regional-option" type="button" data-regional-option data-output-src="assets/images/c1-5.png" aria-label="Regional reference option 2"><img src="assets/images/c1-4.png" alt=""></button>
+                </div>
+                <figure class="regional-card__output">
+                  <h4>Output</h4>
+                  <img data-regional-output src="assets/images/c1-1.png" alt="Regional transfer output">
+                </figure>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span>MagicMakeup project page</span>
+        <span>Minimal editable version</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
